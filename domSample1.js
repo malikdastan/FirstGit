@@ -26,3 +26,19 @@ const oddFruitItems = document.querySelectorAll(".fruit:nth-child(odd)");
 for (let i = 0; i<evenFruitItems.length; i++){
     evenFruitItems[i].style.backgroundColor = "white";
 }
+
+const subHeading = document.createElement('h3');
+const subText = document.createTextNode('Buy high quality organic fruits online');
+subHeading.appendChild(subText);
+const divs = document.getElementsByTagName("div");
+const firstDiv = divs[0];
+firstDiv.appendChild(subHeading);
+subHeading.style.fontStyle="italic"
+const para =document.createElement('p');
+const paraText = document.createTextNode('Total fruits: 4');
+para.appendChild(paraText);
+const newDivs=document.getElementsByTagName('div');
+const newSecondDivs = newDivs[1];
+const basketHeading = document.getElementById("basket-heading");
+newSecondDivs.insertBefore(para,basket-heading);
+para.id = "fruits-total";
