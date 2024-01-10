@@ -12,7 +12,16 @@ form.addEventListener('submit', function(event){
     deleteBtn.appendChild(deleteBtnText);
     newLi.appendChild (deleteBtn);
     deleteBtn.className = 'delete-btn';
+    const editBtn = document.createElement('button');
+    const editBtnText = document.createTextNode('Edit');
+    editBtn.appendChild(editBtnText);
+    editBtn.className = 'edit-Btn';
+    newLi.appendChild(editBtn);
     fruits.appendChild(newLi);
+
+    fruitToAdd.value="";
+
+
 }) 
 
 fruits.addEventListener('click', function(event){
@@ -21,3 +30,11 @@ fruits.addEventListener('click', function(event){
         fruits.removeChild(fruitToDelete);
     }
 })
+const fruitList = document.querySelectorAll('.fruit');
+for (let i = 0; i<fruitList.length; i++){
+    const editBtn = document.createElement('button');
+    const editBtnText = document.createTextNode('Edit');
+    editBtn.appendChild(editBtnText);
+    editBtn.className = 'edit-btn';
+    fruitList[i].appendChild(editBtn);
+}
