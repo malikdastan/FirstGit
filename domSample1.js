@@ -42,3 +42,4 @@ const newSecondDivs = newDivs[1];
 const basketHeading = document.getElementById("basket-heading");
 newSecondDivs.insertBefore(para,basket-heading);
 para.id = "fruits-total";
+
