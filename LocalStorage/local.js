@@ -1,3 +1,4 @@
+const savedExpenses = JSON.parse(localStorage.getItem('expenses')) || [];
 function handleFormSubmit(event){
     event.preventDefault();
     const expense = event.target.expense.value;
@@ -68,6 +69,7 @@ function displayUser(expenseDetails){
         newUser.appendChild(deleteBtn);
         newUser.appendChild(editBtn);
         list.appendChild(newUser);
-        console.log (deleteBtn);
-        console.log(list);
-}
+        // console.log (deleteBtn);
+        // console.log(list);
+}   
+savedExpenses.forEach(displayUser);
